@@ -23,6 +23,11 @@ Use the supplied data as the source of data to answer the questions.  Copy the S
 ## Questions
 
 1. Return ALL the data in the 'movies' table.
+
+```
+SELECT * FROM movies
+```
+
 2. Return ONLY the name column from the 'people' table
 3.Oops! Someone at CodeClan spelled Ian's name wrong! Change it to reflect the proper spelling (change 'Iain Henderson' to 'Ian Henderson').
 4. Return ONLY your name from the 'people' table.
