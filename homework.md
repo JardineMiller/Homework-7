@@ -25,19 +25,84 @@ Use the supplied data as the source of data to answer the questions.  Copy the S
 1. Return ALL the data in the 'movies' table.
 
 ```
-SELECT * FROM movies
+SELECT * FROM movies;
 ```
 
 2. Return ONLY the name column from the 'people' table
+
+```
+SELECT name FROM people;
+```
+
 3.Oops! Someone at CodeClan spelled Ian's name wrong! Change it to reflect the proper spelling (change 'Iain Henderson' to 'Ian Henderson').
+
+```
+UPDATE people
+  SET name = 'Ian Henderson'
+  WHERE id = 10;
+```
+
 4. Return ONLY your name from the 'people' table.
+
+```
+SELECT name FROM people
+  WHERE name = 'Jardine Miller';
+```
+
 5. The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+
+```
+DELETE FROM movies
+  WHERE title = 'Batman Begins';
+```
+
 6. Create a new entry in the 'people' table with the name of one of the instructors.
+
+```
+INSERT INTO people (name) VALUES ('Keith Douglas');
+```
+
 7. Craig Morton, has decided to hijack our movie evening, Remove him from the table of people.
+
+```
+DELETE FROM people
+  WHERE name = 'Craig Morton'
+```
+
 8. Somehow the list of people includes two people named 'Andrew'. Change these entries to the proper names ('Jeff 4', 'Jeff 5')
+
+```
+UPDATE people
+  SET name = 'Jeff 4'
+  WHERE id = 21;
+
+UPDATE people
+  SET name = 'Jeff 5'
+  WHERE id = 22;
+```
+
 9. The cinema has just heard that they will be holding an exclusive midnight showing of 'Guardians of the Galaxy 2'!! Create a new entry in the 'movies' table to reflect this.
+
+```
+INSERT INTO movies (title, year, show_time) 
+VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
+```
+
 10. The cinema would also like to make the Guardian movies a back to back feature. Update the 'Guardians of the Galaxy' show time from 18:55 to 21:30
+
+```
+UPDATE movies
+  SET show_time = '21:30'
+  WHERE title = 'Guardians of the Galaxy';
+```
 
 ## Research
 
 1. Research how to delete multiple entries from your table in a single command.
+
+Deletes the first 6 movies
+
+```
+DELETE FROM movies WHERE id IN (1,2,3,4,5,6);
+```
+

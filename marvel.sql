@@ -20,26 +20,26 @@ CREATE TABLE attendances (
   movie_id INT REFERENCES movies(id) ON DELETE CASCADE
 );
 
-INSERT INTO people (name) VALUES ('Fraser  Black');
-INSERT INTO people (name) VALUES ('Benjamin  Bowen');
-INSERT INTO people (name) VALUES ('Fraser  Brown');
+INSERT INTO people (name) VALUES ('Fraser Black');
+INSERT INTO people (name) VALUES ('Benjamin Bowen');
+INSERT INTO people (name) VALUES ('Fraser Brown');
 INSERT INTO people (name) VALUES ('Brian Connelly');
-INSERT INTO people (name) VALUES ('Mark  Conroy');
-INSERT INTO people (name) VALUES ('Alex  Constantinou');
+INSERT INTO people (name) VALUES ('Mark Conroy');
+INSERT INTO people (name) VALUES ('Alex Constantinou');
 INSERT INTO people (name) VALUES ('Krisztian Der');
 INSERT INTO people (name) VALUES ('Malcolm Finlayson');
-INSERT INTO people (name) VALUES ('Alistair  Guthrie');
+INSERT INTO people (name) VALUES ('Alistair Guthrie');
 INSERT INTO people (name) VALUES ('Iain Henderson');
-INSERT INTO people (name) VALUES ('Anna  Lanigan');
+INSERT INTO people (name) VALUES ('Anna Lanigan');
 INSERT INTO people (name) VALUES ('Matthew Manson');
 INSERT INTO people (name) VALUES ('Eleni Margariti');
-INSERT INTO people (name) VALUES ('Catriona  Meriel');
+INSERT INTO people (name) VALUES ('Catriona Meriel');
 INSERT INTO people (name) VALUES ('Jardine Miller');
-INSERT INTO people (name) VALUES ('Philip  Mitchell');
+INSERT INTO people (name) VALUES ('Philip Mitchell');
 INSERT INTO people (name) VALUES ('Sophie  Mullins');
 INSERT INTO people (name) VALUES ('Eliot Short');
-INSERT INTO people (name) VALUES ('Andrew  Wright');
-INSERT INTO people (name) VALUES ('Katarina  Zemplenyiova');
+INSERT INTO people (name) VALUES ('Andrew Wright');
+INSERT INTO people (name) VALUES ('Katarina Zemplenyiova');
 INSERT INTO people (name) VALUES ('Andrew');
 INSERT INTO people (name) VALUES ('Andrew');
 
@@ -58,7 +58,6 @@ INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Age of Ultron', 2
 INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '18:00');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '16:25');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '13:20');
-INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '21:55');
 
 INSERT INTO attendances (person_id, movie_id) VALUES (2, 11);
 INSERT INTO attendances (person_id, movie_id) VALUES (9, 7);
@@ -148,3 +147,15 @@ INSERT INTO attendances (person_id, movie_id) VALUES (10, 2);
 INSERT INTO attendances (person_id, movie_id) VALUES (14, 16);
 INSERT INTO attendances (person_id, movie_id) VALUES (14, 15);
 INSERT INTO attendances (person_id, movie_id) VALUES (3, 9);
+
+INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
+
+DELETE FROM movies WHERE id IN (1,2,3,4,5,6);
+
+SELECT * FROM movies;
+
+
+
+
+
+
